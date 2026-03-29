@@ -1,0 +1,590 @@
+/* Additional custom styles if needed */
+/* Using Tailwind for main styling, this file for overrides or custom CSS */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #4facfe, #00f2fe);
+    color: #333;
+}
+
+
+
+#hero .hero-container,
+#hero header {
+    position: relative;
+    z-index: 100; /* bring hero content above the mobile menu overlay */
+}
+
+#hero header {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    padding: 0.75rem 0;
+}
+
+#hero header .text-2xl,
+#hero header .text-3xl {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 124%;
+}
+
+#hero nav {
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 124%;
+    letter-spacing: 0;
+}
+
+#hero nav > a:not(.social-icon) {
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0 0.25rem;
+    font-size: 18px;
+}
+
+#hero nav > a:not(.social-icon)::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.2rem;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width 0.25s ease;
+}
+
+#hero nav a:hover::after,
+#hero nav a:focus-visible::after {
+    width: 100%;
+}
+
+#hero .hero-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 2.5rem;
+    max-width: 1180px;
+    margin: 3rem auto 0;
+    padding: 0 1rem 2rem;
+}
+/* Hero Section Styles */
+#hero {
+    position: relative;
+    overflow: hidden;
+    min-height: calc(100vh - 1rem);
+    background: linear-gradient(135deg, #9D5FFF 0%, #B870FF 35%, #A855F7 70%, #D946EF 100%);
+}
+
+/* Tablet adjustments (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #hero nav > a:not(.social-icon) {
+        font-size: 12px;
+    }
+
+    #hero nav {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #hero .hero-container {
+        grid-template-columns: 1.05fr 1fr;
+        gap: 3.5rem;
+        margin-top: 3.5rem;
+    }
+}
+
+#hero .hero-left h1 {
+    text-transform: uppercase;
+    font-size: 48px;
+    line-height: 124%;
+    font-weight: 700;
+    letter-spacing: 0;
+    max-width: 580px;
+}
+
+#hero .hero-left p {
+    max-width: 570px;
+    margin: 1rem 0 1.6rem;
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#hero .hero-left .btn-group a {
+    min-width: 180px;
+    padding: 0.85rem 1.4rem;
+}
+
+#hero .hero-right {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#hero .hero-right img {
+    max-width: 444px;
+    width: 100%;
+    height: auto;
+}
+
+/* Волны — дизайнерский стиль */
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    line-height: 0;
+}
+
+.wave svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* задняя волна */
+.wave-back path {
+    fill: rgba(255, 255, 255, 0.25);
+}
+
+.wave-back {
+    transform: translateY(25px);
+}
+
+/* передняя волна */
+.wave-front path {
+    fill: #fafafa;
+}
+
+.wave-front {
+    filter: drop-shadow(0 -4px 20px rgba(0,0,0,0.08));
+}
+
+#features {
+    background-color: #fafafa;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr minmax(300px, 420px) 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 1.5rem;
+    margin: 0 auto;
+}
+
+.feature-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.feature-col.left article:nth-child(1) {margin-top: -3rem;}
+.feature-col.left article:nth-child(2) {margin-top: 0.5rem;}
+.feature-col.left article:nth-child(3) {margin-top: 3rem;}
+
+.feature-col.right article:nth-child(1) {margin-top: -3rem;}
+.feature-col.right article:nth-child(2) {margin-top: 0.5rem;}
+.feature-col.right article:nth-child(3) {margin-top: 3rem;}
+
+/* --- Mobile (<= 768px) adjustments for Hero --- */
+@media (max-width: 768px) {
+    /* Header: keep logo left, burger right, hide desktop nav (already hidden) */
+    #hero header {
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    #mobile-burger {
+        background: transparent;
+        border: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Stack hero content vertically */
+    #hero .hero-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+        max-width: 100%;
+        margin: 1.5rem auto 0;
+        padding: 0 20px 2rem;
+    }
+
+    #hero .hero-left {
+        text-align: center;
+        order: 1;
+        width: 100%;
+        padding: 0 6px;
+    }
+
+    #hero .hero-right {
+        order: 2;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    /* Typography adjustments */
+    #hero .hero-left h1 {
+        font-size: 34px;
+        line-height: 1.05;
+        text-align: center;
+    }
+
+    #hero .hero-left p {
+        font-size: 15px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 520px;
+    }
+
+    /* Buttons: vertical stack, full-width up to max 280px */
+    #hero .btn-group {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    #hero .btn-group a {
+        width: 100%;
+        max-width: 280px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 0.9rem 1rem;
+    }
+
+    /* add spacing between buttons on mobile */
+    #hero .btn-group a + a { margin-top: 12px; }
+
+    /* Phones: scale and center */
+    #hero .hero-right img {
+        max-width: 90%;
+        transform: scale(0.85);
+        height: auto;
+    }
+
+    /* Ensure waves remain visible and not clipped */
+    .wave {
+        height: 200px;
+    }
+
+    /* Slightly reduce hero pseudo background intensity on small screens */
+    #hero::before {
+        opacity: 0.95;
+    }
+}
+
+/* Mobile menu styles (overlay covers whole viewport) */
+/* Mobile menu: semi-transparent panel that doesn't reach full width (keeps left area visible)
+   and sits under the main hero content so headers/photos appear above it. */
+#mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    display: none;
+    align-items: flex-start;
+    justify-content: flex-end;
+    z-index: 40;
+}
+
+/* Hide mobile menu on desktop (768px+) — only show on mobile devices */
+@media (min-width: 768px) {
+    #mobile-menu {
+        display: none !important;
+    }
+}
+
+#mobile-menu .mobile-menu-inner {
+    width: 78%;
+    max-width: 360px;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+    backdrop-filter: blur(6px);
+    padding: 36px 22px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* ensure burger stays clickable above overlay */
+#mobile-burger {
+    z-index: 80;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px;
+}
+
+/* Hide burger button on desktop (768px+) */
+@media (min-width: 768px) {
+    #mobile-burger {
+        display: none !important;
+    }
+}
+
+/* burger lines styling to ensure equal spacing and consistent look */
+.burger-line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    margin: 0;
+    transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+/* transform to an X when burger has .open */
+#mobile-burger.open .burger-line:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+#mobile-burger.open .burger-line:nth-child(2) { opacity: 0; transform: scaleX(0); }
+#mobile-burger.open .burger-line:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+/* close button inside panel */
+.mobile-close {
+    background: transparent;
+    color: #fff;
+    font-size: 32px;
+    line-height: 1;
+    border: none;
+    align-self: flex-end;
+    padding: 6px 8px;
+}
+
+.mobile-link {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+.mobile-social { margin-top: auto; display:flex; gap:12px; }
+
+/* utility to show menu */
+.is-open { display: flex !important; }
+
+.feature-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 1rem 1.15rem;
+    box-shadow: 0 8px 30px rgba(15,23,42,0.06);
+    max-width: 330px;
+}
+
+.feature-card .icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 999px;
+    background: linear-gradient(140deg, #A855F7 0%, #C084FC 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+}
+
+.feature-card .icon img {
+    width: 24px;
+    height: 24px;    display: block;
+}
+
+.feature-card .icon img.icon-centered {
+    transform: translateX(1px);}
+
+.feature-card h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.feature-card p {
+    margin: 0.45rem 0 0;
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.45;
+}
+
+.phone-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1024px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-col {
+        align-items: center;
+    }
+
+    .feature-col.left article,
+    .feature-col.right article {
+        margin-top: 0 !important;
+    }
+
+    .phone-wrap {
+        margin: 1.5rem 0;
+    }
+}
+
+#hero h1 {
+    letter-spacing: 0;
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 124%;
+}
+
+#hero p {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.app-button {
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    line-height: 124%;
+}
+
+#hero .social-icon {
+    width: 25px;
+    height: 25px;
+    border-radius: 0;
+    background: transparent;
+    opacity: 1;
+    transform: rotate(0deg);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .2s ease;
+}
+
+#hero .social-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#hero .social-icon:hover {
+    transform: translateY(-2px);
+}
+
+.mockup-phone {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#footer {
+    background-color: #A855F7;
+}
+
+#footer h3 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 124%;
+    letter-spacing: 0;
+    color: #ffffff;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-col p {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: 0;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li a {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: 0;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+    opacity: 0.75;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    border: none;
+    background: transparent;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+}
+
+.social-link img {
+    width: 56px;
+    height: 56px;
+    display: block;
+    filter: none;
+}
+
+#footer .border-t {
+    border-top-color: rgba(255, 255, 255, 0.2);
+}
+
+#footer .text-center {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Hero Section Styles */
+#hero {
+    position: relative;
+    overflow: hidden;
+    min-height: calc(100vh - 1rem);
+    background: linear-gradient(135deg, #9D5FFF 0%, #B870FF 35%, #A855F7 70%, #D946EF 100%);
+}

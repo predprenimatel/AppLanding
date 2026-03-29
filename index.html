@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVEON App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="text-white">
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="relative min-h-screen overflow-hidden">
+            <div class="relative z-10 container mx-auto px-6 pt-8 md:pt-10 lg:pt-12 pb-0">
+                <header class="flex items-center justify-between text-white max-w-[1200px] mx-auto">
+                    <div class="text-2xl md:text-3xl font-black tracking-wider">MOVEON</div>
+                    <nav class="hidden md:flex items-center gap-6 font-medium text-white">
+                        <a href="#hero" class="hover:opacity-90">Главная</a>
+                        <a href="#features" class="hover:opacity-90">Функционал</a>
+                        <a href="#" class="hover:opacity-90">Подробнее</a>
+                        <a href="#" class="hover:opacity-90">О нас</a>
+                        <a href="#footer" class="hover:opacity-90">Контакты</a>
+                        <div class="flex items-center gap-3 ml-6">
+                            <a href="#" class="social-icon"><img src="assets/facebook.svg" alt="Facebook"></a>
+                            <a href="#" class="social-icon"><img src="assets/instagramm.svg" alt="Instagram"></a>
+                            <a href="#" class="social-icon"><img src="assets/twitter.svg" alt="Twitter"></a>
+                        </div>
+                    </nav>
+
+                    <!-- Mobile burger (visible on < md) -->
+                    <button id="mobile-burger" class="md:hidden" aria-label="Открыть меню" aria-expanded="false">
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                    </button>
+
+                    
+                </header>
+                <div class="hero-container mt-8 md:mt-12 lg:mt-16">
+                    <div class="hero-left text-center lg:text-left">
+                        <h1>НАЙДИ СВОЮ КОМПАНИЮ ДРУЗЕЙ</h1>
+                        <p>С помощью приложения Moveon найди свою компанию для походов в кафе, бар или для прогулок по городу</p>
+                        <div class="btn-group flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <a href="#" class="inline-flex items-center justify-center gap-2 border border-white rounded-full text-white font-semibold hover:bg-white/10 transition app-button">
+                                <img src="assets/apple.png" alt="App Store" class="w-4 h-4 object-contain">
+                                APP STORE
+                            </a>
+                            <a href="#" class="inline-flex items-center justify-center gap-2 border border-white rounded-full text-white font-semibold hover:bg-white/10 transition app-button">
+                                <img src="assets/surface88745854.png" alt="Play Market" class="w-4 h-4 object-contain">
+                                PLAY MARKET
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-right">
+                        <img src="assets/hero-phones.png" alt="MOVEON hero phones" class="drop-shadow-2xl" />
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none" style="height: 160px;">
+                <svg viewBox="0 0 1440 200" preserveAspectRatio="none" class="w-full h-full">
+                    <path d="M0,130 C350,200 700,40 1100,110 C1300,150 1400,30 1440,80 L1440,200 L0,200 Z" fill="#fafafa"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="relative bg-[#fafafa] py-20">
+            <div class="container mx-auto px-6 lg:px-20">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-extrabold text-[#111827]">ФУНКЦИОНАЛ</h2>
+                    <p class="mt-4 text-base lg:text-lg text-[#4b5563] max-w-3xl mx-auto">Moveon поможет найти единомышленников и собрать большую компанию в одном месте</p>
+                </div>
+
+                <div class="relative flex justify-center items-center">
+                    <div class="feature-grid w-full max-w-[1260px] mx-auto">
+                        <div class="feature-col left">
+                            <article class="feature-card">
+                                <div class="icon"><img src="assets/attach-paperclip.svg" alt="Присоединяйся к событиям"></div>
+                                <h3>Присоединяйся к событиям</h3>
+                                <p>Найди интересующие тебя события на главном экране и жми кнопку «Иду!»</p>
+                            </article>
+                            <article class="feature-card">
+                                <div class="icon"><img src="assets/eventcalendarsymbol_79791 1.svg" alt="Ищи события по фильтрам"></div>
+                                <h3>Ищи события по фильтрам</h3>
+                                <p>Для поиска событий мы предлагаем более 10 фильтров</p>
+                            </article>
+                            <article class="feature-card">
+                                <div class="icon"><img src="assets/Vector.svg" alt="Куда пойдут твои друзья?"></div>
+                                <h3>Куда пойдут твои друзья?</h3>
+                                <p>В любом профиле отображается список мест, в которые посылал пользователь или на которые планирует пойти</p>
+                            </article>
+                        </div>
+
+                        <div class="phone-wrap">
+                            <img src="assets/Graphite.png" alt="MOVEON Graphite mockup" class="mx-auto h-[580px] lg:h-[760px] object-contain" />
+                        </div>
+
+                        <div class="feature-col right">
+                            <article class="feature-card">
+                                <div class="icon"><img src="assets/Vector (1).svg" alt="Создавай свои события" class="icon-centered"></div>
+                                <h3>Создавай свои события</h3>
+                                <p>Жми на плюсик в главном меню, создавай своё событие и выбирай удобно своих друзей</p>
+                            </article>
+                            <article class="feature-card">
+                                <div class="icon"><img src="assets/Vector (2).svg" alt="Оставляй метки на карте"></div>
+                                <h3>Оставляй метки на карте</h3>
+                                <p>Отмечайся на карте, чтобы быстрее находить компанию</p>
+                            </article>
+                            <article class="feature-card">
+                                <div class="icon"><img src="assets/Vector (3).svg" alt="Чаты и беседы"></div>
+                                <h3>Чаты и беседы</h3>
+                                <p>Общайся в чатах с друзьями, обсуждайте события в беседах</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer id="footer" class="relative bg-[#A855F7] text-white pt-36 pb-12">
+            <div class="absolute top-0 left-0 w-full overflow-hidden leading-none" style="height: 180px;">
+                <svg viewBox="0 0 1440 180" preserveAspectRatio="none" class="w-full h-full">
+                    <path d="M0,80 Q 360,20 720,80 T 1440,80 L1440,0 L0,0 Z" fill="#fafafa" />
+                </svg>
+            </div>
+
+            <div class="relative z-10 container mx-auto px-6 lg:px-20">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-16 mb-12">
+                    <!-- About MOVEON -->
+                    <div class="footer-col">
+                        <h3 class="text-xl font-bold mb-4">About MOVEON</h3>
+                        <p class="text-sm leading-relaxed opacity-90">Moveon поможет найти единомышленников и собрать большую компанию в одном месте. Создавайте свое событие куда бы ни хотел сходить, люди увидят твое событие в ленте и желающие присоединяться к тебе.</p>
+                    </div>
+
+                    <!-- Наші Контакти -->
+                    <div class="footer-col">
+                        <h3 class="text-xl font-bold mb-4">Наши Контакты</h3>
+                        <ul class="space-y-2 text-sm opacity-90">
+                            <li><a href="mailto:info@moveon.ua" class="hover:opacity-75 transition">info@moveon.ua</a></li>
+                            <li><a href="mailto:support@moveon.ua" class="hover:opacity-75 transition">support@moveon.ua</a></li>
+                            <li><a href="tel:+380442345678" class="hover:opacity-75 transition">+380 44 234 56 78</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Социальные сети -->
+                    <div class="footer-col">
+                        <h3 class="text-xl font-bold mb-4">Социальные сети</h3>
+                        <div class="flex items-center gap-4">
+                            <a href="#" class="social-link">
+                                <img src="assets/twitter.svg" alt="Twitter">
+                            </a>
+                            <a href="#" class="social-link">
+                                <img src="assets/facebook.svg" alt="Facebook">
+                            </a>
+                            <a href="#" class="social-link">
+                                <img src="assets/instagramm.svg" alt="Instagram">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="border-t border-white/30 my-8"></div>
+
+                <!-- Copyright -->
+                <div class="text-center text-sm opacity-75">
+                    <p>APP MOVEON © 2021</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Mobile menu (moved outside header so it can fully overlay the page) -->
+    <div id="mobile-menu" class="hidden" aria-hidden="true">
+        <nav class="mobile-menu-inner">
+            <button id="mobile-close" class="mobile-close" aria-label="Закрыть меню">×</button>
+            <a href="#hero" class="mobile-link">Главная</a>
+            <a href="#features" class="mobile-link">Функционал</a>
+            <a href="#" class="mobile-link">Подробнее</a>
+            <a href="#" class="mobile-link">О нас</a>
+            <a href="#footer" class="mobile-link">Контакты</a>
+            <div class="mobile-social">
+                <a href="#"><img src="assets/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="assets/instagramm.svg" alt="Instagram"></a>
+                <a href="#"><img src="assets/twitter.svg" alt="Twitter"></a>
+            </div>
+        </nav>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
